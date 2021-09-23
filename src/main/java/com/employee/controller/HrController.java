@@ -37,6 +37,12 @@ public class HrController {
 	EmployeeHrService employeeHrService;
 	
 	@GetMapping("/")
+	public void welcome()
+	{
+		System.out.println("Welcome to the home Page");
+	}
+	
+	@GetMapping("/login")
 	public ModelAndView hrHome(ModelAndView mv,HttpServletRequest request)
 	{
 		mv.setViewName("login.jsp");
